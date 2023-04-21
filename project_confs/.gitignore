@@ -1,2 +1,2 @@
-frontend
-!frontend/static/frontend/main.js
+frontend/*
+!frontend/static

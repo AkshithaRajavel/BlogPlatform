@@ -56,9 +56,9 @@ export default class AuthorPosts extends Component{
                 name= {this.props.isLoggedIn ? ['My Profile','Logout'] :['Login','Signup']}
                 link={this.props.isLoggedIn ?['/dashboard','/api/logout']:['/login','/signup']} />
             <br/>
-            <h1>
+            <h3>
                 Author: {this.state.author}
-            </h1>
+            </h3>
             {
                 this.props.isLoggedIn?
                 (this.state.subscribed?
@@ -66,7 +66,7 @@ export default class AuthorPosts extends Component{
                 <a href={`/api/subscribe/${this.state.author}`} class="btn btn-primary">Subscribe</a>):
                 <></>
                 }
-            <h3>Public Posts</h3>
+            <h2>Public Posts</h2>
             <div class='posts-body'>
                 {this.state.post_list}
             </div>

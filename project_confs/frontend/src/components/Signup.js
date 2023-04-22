@@ -17,6 +17,7 @@ export default class Signup extends Component{
         const data = {email:email,password:password};
         fetch("api/signup",
         {method:"POST",
+        headers: {'Content-Type': 'application/json'},
         body:JSON.stringify(data),
         redirect:'manual'
         }).then((response)=>response.json())
